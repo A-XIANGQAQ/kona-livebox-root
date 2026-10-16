@@ -44,7 +44,7 @@ offset  size  field
 135     1     reserved[80]
 ```
 
-### ⚠️ 踩过的两个坑（都曾导致「看起来对、其实全错」）
+### ⚠️ 两个偏移陷阱（搞错会「看起来对、其实全错」）
 
 1. **偏移基准不同** —— `hash_offset` / `signature_offset` 相对**认证块**，
    而 `public_key_offset` / `descriptors_offset` 相对**辅助块**。
@@ -81,7 +81,7 @@ python3 resign_vbmeta.py <原厂 vbmeta> <改过的 boot> <输出的 vbmeta>
 ## 4. 刷入前的检查清单
 
 - [ ] 备份原厂 `boot_a` / `vbmeta_a`（`dd` 到 /sdcard 再拉回电脑）
-- [ ] **确认 B 槽是可启动的完整系统**（兜底用；本项目 B 槽保留了上一版固件）
+- [ ] **确认 B 槽是可启动的完整系统**（兜底用）
 - [ ] `verifiedbootstate` 刷后应为 `green`
 - [ ] 绝不碰 `xbl` / `xbl_config` / `abl`（PBL 校验，写坏 = 永久砖）
 

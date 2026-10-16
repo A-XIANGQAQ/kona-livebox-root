@@ -11,7 +11,7 @@
  *   4. 按偏移原地改写值，并按 bionic 的 seqlock 协议递增 serial
  *
  * 只改运行时内存（映射是共享的，其它进程立刻能看到），不落盘；
- * 重启后由 build.prop 重新加载，自动复原。
+ * 属性只存在于运行时内存，重启即复原。
  */
 #define _GNU_SOURCE
 #include <stdio.h>

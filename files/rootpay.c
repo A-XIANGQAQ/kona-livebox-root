@@ -14,7 +14,12 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-#define PROBE "/data/data/com.termux/files/home/probe"
+/* payload 与 rootsvc / adbkey.pub 所在目录。编译时可覆盖：
+ *   clang -DROOTPAY_DIR=\"/your/dir\" -o rootpay rootpay.c */
+#ifndef ROOTPAY_DIR
+#define ROOTPAY_DIR "/data/local/tmp"
+#endif
+#define PROBE ROOTPAY_DIR
 
 static int g_log = -1;
 
