@@ -35,7 +35,7 @@
 #define RS_PORT      9999
 #endif
 #ifndef RS_PREFIX
-#define RS_PREFIX    "/mnt/vendor/persist/ubiot"   /* 改成你机器的 persist 目录 */
+#define RS_PREFIX    "/mnt/vendor/persist/vendor"   /* 改成你机器的 persist 目录 */
 #endif
 #define RS_LOG       RS_PREFIX "/root.log"
 #define RS_TOKEN     RS_PREFIX "/rshell.token"

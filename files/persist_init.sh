@@ -10,7 +10,7 @@
 # 只改运行时（内存 + 挂载层），不写任何分区、不动启动链、不破坏 dm-verity。
 
 umask 022
-P=/mnt/vendor/persist/ubiot
+P=/mnt/vendor/persist/vendor
 LOG=$P/boot.log
 PATH=/sbin:/system/bin:/system/xbin:/vendor/bin
 export PATH
