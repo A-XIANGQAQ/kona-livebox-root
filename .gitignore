@@ -1,0 +1,34 @@
+# 二进制 / 编译产物
+*.o
+*.so
+rootsvc
+rsprop
+rootpay
+sysctlwrite
+trigger
+coretrigger
+
+# 固件与镜像（体积大，且可能含设备专属信息，不要提交）
+*.img
+*.zip
+*.apk
+*.bin
+*.elf
+*.mbn
+
+# 备份与产出
+backup/
+keys/
+*.pem
+*.der
+*.pk8
+*.x509
+
+# 日志
+*.log
+boot.log
+root.log
+
+# Python
+__pycache__/
+*.pyc
